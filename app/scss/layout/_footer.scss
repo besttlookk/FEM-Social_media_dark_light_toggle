@@ -1,0 +1,11 @@
+@use "utils" as *;
+
+.footer {
+  text-align: center;
+  font-size: rem(11);
+  color: var(--col-txt2);
+
+  a {
+    color: var(--facebook);
+  }
+}

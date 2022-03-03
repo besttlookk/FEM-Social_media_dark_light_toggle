@@ -1,0 +1,11 @@
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-mode: "dark";
+    --col-bg: var(--bg-dark);
+    --col-bg-top: var(--bg-top-dark);
+    --col-bg-card: var(--bg-card-dark);
+    --col-txt1: var(--dark-text1);
+    --col-txt2: var(--dark-text2);
+    --col-card-hover: var(--bg-card-hover-dark);
+  }
+}

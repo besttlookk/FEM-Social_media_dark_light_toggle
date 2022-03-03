@@ -1,0 +1,27 @@
+@use "../utils/" as *;
+
+.header {
+  display: flex;
+  flex-direction: column;
+
+  @include bp("medium") {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    @include bp("medium") {
+      align-items: center;
+    }
+  }
+
+  &__toggle {
+    margin-left: rem(12);
+  }
+}

@@ -1,0 +1,46 @@
+@use "utils" as *;
+
+.card-overview {
+  @include flex(
+    $direction: column,
+    $justify-content: space-between,
+    $align-items: stretch
+  );
+  padding: rem(25);
+  height: rem(130);
+  background-color: var(--col-bg-card);
+  border-radius: rem(5);
+
+  @include hover;
+
+  &__top {
+    @include flex($justify-content: space-between);
+  }
+
+  &__bottom {
+    @include flex($justify-content: space-between, $align-items: end);
+  }
+
+  &__count {
+    font-size: rem(30);
+    font-weight: 700;
+    color: var(--col-txt2);
+  }
+
+  &__change {
+    @include flex();
+    font-weight: 700;
+
+    &--up {
+      color: var(--limegreen);
+    }
+
+    &--down {
+      color: var(--brightred);
+    }
+  }
+
+  &__arrow {
+    margin-right: 5px;
+  }
+}
