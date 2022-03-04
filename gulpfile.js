@@ -7,6 +7,7 @@ const cssnano = require("cssnano");
 const babel = require("gulp-babel");
 const terser = require("gulp-terser");
 const browsersync = require("browser-sync").create();
+const pug = require("gulp-pug");
 
 // Sass Task
 function scssTask() {
@@ -22,6 +23,13 @@ function jsTask() {
     .pipe(babel({ presets: ["@babel/preset-env"] }))
     .pipe(terser())
     .pipe(dest("dist", { sourcemaps: "." }));
+}
+
+// Pug Task
+function pugTask() {
+  return src("app/pug/index.pug")
+    .pipe(pug({ pretty: true }))
+    .pipe(dest("."));
 }
 
 // Browsersync
@@ -48,13 +56,21 @@ function browserSyncReload(cb) {
 function watchTask() {
   watch("*.html", browserSyncReload);
   watch(
-    ["app/scss/**/*.scss", "app/**/*.js"],
-    series(scssTask, jsTask, browserSyncReload)
+    ["app/pug/*.pug app/scss/**/*.scss", "app/**/*.js"],
+    series(pugTask, scssTask, jsTask, browserSyncReload)
   );
 }
 
 // Default Gulp Task
-exports.default = series(scssTask, jsTask, browserSyncServe, watchTask);
+exports.default = series(
+  pugTask,
+  scssTask,
+  jsTask,
+  browserSyncServe,
+  watchTask
+);
 
 // Build Gulp Task
-exports.build = series(scssTask, jsTask);
+exports.build = series(pugTask, scssTask, jsTask);
+
+exports.html = pugTask;

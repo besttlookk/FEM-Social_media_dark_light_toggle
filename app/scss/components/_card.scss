@@ -21,15 +21,15 @@
     height: 3px;
   }
 
-  &--fb::after {
+  &--facebook::after {
     background-color: var(--facebook);
   }
 
-  &--tt::after {
+  &--twitter::after {
     background-color: var(--twitter);
   }
 
-  &--insta::after {
+  &--instagram::after {
     background-image: linear-gradient(
       to right,
       var(--insta-start),
@@ -37,7 +37,7 @@
     );
   }
 
-  &--yt::after {
+  &--youtube::after {
     background-color: var(--youtube);
   }
 

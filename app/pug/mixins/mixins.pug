@@ -1,0 +1,22 @@
+mixin card(cardData)
+  .card(class=`card--${cardData.social}`) 
+    .card__top
+      img(alt="social-logo" src=`./images/icon-${cardData.social}.svg` class="card__logo")
+      span.card__username #{cardData.username}
+    .card__middle
+      p.card__count #{cardData.count}
+      p #{cardData.countLabel}
+    .card__bottom(class=`card__botttom--${cardData.arrowDir} `)
+      img(class="card__arrow" alt="arrow" src=`./images/icon-${cardData.arrowDir}.svg`)
+      span #{cardData.change}
+
+mixin cardOverview(cardOverviewData)
+  .card-overview 
+    .card-overview__top
+      span.u-text-subheading #{cardOverviewData.label}
+      img(alt=`${cardOverviewData.social}-logo` src=`./images/icon-${cardOverviewData.social}.svg`)
+    .card-overview__bottom
+      span.card-overview__count #{cardOverviewData.count}
+      .card-overview__change(class=`card-overview__change--${cardOverviewData.arrowDir}`)
+        img.card-overview__arrow(src=`./images/icon-${cardOverviewData.arrowDir}.svg` alt=`${cardOverviewData.arrowDir}-arrow`)
+        span #{cardOverviewData.change}

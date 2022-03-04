@@ -1,0 +1,15 @@
+extends templates/layout 
+
+block main 
+  section.section
+    each cardData in cardDataArr
+      +card(cardData)
+  
+
+  section.section
+    h1.header__title.span-all Overview - Today
+    each cardOverviewData in cardOverviewDataArr 
+      +cardOverview(cardOverviewData)
+
+
+
