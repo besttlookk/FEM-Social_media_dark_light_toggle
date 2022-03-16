@@ -64,21 +64,3 @@ function handleCheckboxChange() {
 
 // We run applySetting() by default to make sure that the user’s preference is applied on page load.
 applySetting();
-
-// const setColorScheme = (e) => {
-//   if (e.matches) {
-//     // Dark
-//     console.log("Dark mode");
-//     checkboxEl.checked = true;
-//   } else {
-//     // Light
-//     console.log("Light mode");
-//     checkboxEl.checked = false;
-//   }
-//   applySetting(toggleSetting());
-// };
-
-// const colorSchemeQueryList = window.matchMedia("(prefers-color-scheme: dark)");
-
-// setColorScheme(colorSchemeQueryList);
-// colorSchemeQueryList.addEventListener("change", setColorScheme);

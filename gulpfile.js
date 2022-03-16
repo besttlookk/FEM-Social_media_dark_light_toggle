@@ -56,7 +56,7 @@ function browserSyncReload(cb) {
 function watchTask() {
   watch("*.html", browserSyncReload);
   watch(
-    ["app/pug/*.pug app/scss/**/*.scss", "app/**/*.js"],
+    ["app/pug/*.pug", "app/scss/**/*.scss", "app/**/*.js"],
     series(pugTask, scssTask, jsTask, browserSyncReload)
   );
 }
