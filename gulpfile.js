@@ -133,7 +133,5 @@ exports.default = series(
 
 exports.build = series(
   prodClean, // Clean Build Folder
-  parallel(prodStylesTask, prodJsTask, prodHTMLTask, prodImageTask), //Run All tasks in parallel
-  browserSyncServe, // Live Preview Build
-  watchTask // Watch for Live Changes
+  parallel(prodStylesTask, prodJsTask, prodHTMLTask, prodImageTask) //Run All tasks in parallel
 );
