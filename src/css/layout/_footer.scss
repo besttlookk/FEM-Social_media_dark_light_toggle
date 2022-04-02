@@ -1,0 +1,19 @@
+@use "utils" as *;
+
+.footer {
+  text-align: center;
+  font-size: rem(15);
+  color: var(--col-txt2);
+
+  a {
+    color: var(--facebook);
+    margin-inline: 2px;
+    font-weight: 700;
+
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      text-decoration-thickness: 3px;
+    }
+  }
+}

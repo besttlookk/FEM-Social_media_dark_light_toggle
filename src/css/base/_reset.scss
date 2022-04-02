@@ -13,16 +13,6 @@ html {
   font-size: 100%; //default 16px
 }
 
-html[data-theme="dark"] {
-  --color-mode: "dark";
-  --col-bg: var(--bg-dark);
-  --col-bg-top: var(--bg-top-dark);
-  --col-bg-card: var(--bg-card-dark);
-  --col-txt1: var(--dark-text1);
-  --col-txt2: var(--dark-text2);
-  --col-card-hover: var(--bg-card-hover-dark);
-}
-
 body {
   min-height: 100vh;
   font-family: var(--font-inter);

@@ -18,7 +18,7 @@
   }
 
   &__bottom {
-    @include flex($justify-content: space-between, $align-items: end);
+    @include flex($justify-content: space-between, $align-items: flex-end);
   }
 
   &__count {
